@@ -1,9 +1,11 @@
 class StudentsController < ApplicationController
+  
   def index
     @students = Student.all
   end
+  
   def show
-    @student = Student.id[params[:id]]
-
+    @student = Student.find(params[:id])
   end
+  
 end
